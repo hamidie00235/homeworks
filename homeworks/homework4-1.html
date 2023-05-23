@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homework">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Abdullah Ergul">
+    <title>Homework 4</title>
+    <style>
+        body{
+            background-color: #101414;
+            color: #c9d1d9;
+            width: 98.5vw;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            }
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="hw4_2.php" target="_blank" method="get" onsubmit="return validateForm()">
+        <input type="text" name="username" id="">
+        <button type="submit">GONDER</button>
+        <label>
+            <input type="checkbox" id="myCheckbox"> Checkbox
+        </label>
+    </form>    
+    <form action="hw4_2.php" method="post" target="_blank">
+        <input type="text" name="password" id="">
+        <button type="submit">GONDER</button>
+    </form>
+</body>
+<script>
+function validateForm() {
+    var checkbox = document.getElementById('myCheckbox');
+    
+    if (checkbox.checked) {
+        return true; // Formu gönder
+    } else {
+        alert('Lütfen checkbox\'ı işaretleyin.'); // Hata mesajı göster
+        return false; // Formu gönderme
+    }
+}
+</script>
+</html>
